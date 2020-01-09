@@ -35,7 +35,7 @@ public class Controlador {
     }
     @PutMapping(path = {"/{id}"})
     public Persona editar(@RequestBody Persona p,@PathVariable("id") int id){
-        p.setId(id);
+        p.setId_persona(id);
         return service.edit(p);
     }
     @DeleteMapping(path = {"/{id}"})

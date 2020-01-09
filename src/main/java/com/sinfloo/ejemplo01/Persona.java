@@ -1,6 +1,8 @@
 
 package com.sinfloo.ejemplo01;
 
+import java.util.List;
+
 import javax.persistence.*;
 
 @Entity
@@ -9,18 +11,38 @@ public class Persona {
     
     @Id
     @Column
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private int id_persona;
     @Column
     private String nombre;
     @Column 
     private String apellidos;
 
-    public int getId() {
-        return id;
-    }
+   /* @OneToOne(mappedBy = "persona")
+    private Mascota mascota; */
+    
+   
+	public Persona() {
+		super();
+	}
 
-    public String getNombre() {
+	/*public Mascota getMascota() {
+		return mascota;
+	}
+
+	public void setMascota(Mascota mascota) {
+		this.mascota = mascota;
+	} */
+
+	public int getId_persona() {
+		return id_persona;
+	}
+
+	public void setId_persona(int id_persona) {
+		this.id_persona = id_persona;
+	}
+
+	public String getNombre() {
 		return nombre;
 	}
 
@@ -28,9 +50,6 @@ public class Persona {
 		this.nombre = nombre;
 	}
 
-	public void setId(int id) {
-        this.id = id;
-    }
 
     public String getApellidos() {
         return apellidos;
