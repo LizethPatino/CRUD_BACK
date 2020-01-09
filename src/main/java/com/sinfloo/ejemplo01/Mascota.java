@@ -23,7 +23,7 @@ public class Mascota {
 	    @Column 
 	    private String razaPerro;
 	    
-	    @OneToOne
+	    @ManyToOne
 	    @JoinColumn(name="id_persona", nullable  = false)
 	    private Persona persona; 
 
