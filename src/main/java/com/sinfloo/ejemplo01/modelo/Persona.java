@@ -1,7 +1,7 @@
 
 package com.sinfloo.ejemplo01.modelo;
 
-import java.util.List;
+
 
 import javax.persistence.*;
 
